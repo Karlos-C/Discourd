@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/FondNoir">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/titre_demandes_amis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demandes d'amis"
+        android:textSize="20sp"
+        android:textColor="@color/TitreBlanc"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Liste des demandes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_demandes_amis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titre_demandes_amis"
+        android:layout_above="@id/footer_navigation"
+        android:padding="8dp" />
+
+    <!-- Footer -->
+    <include
+        android:id="@+id/footer_navigation"
+        layout="@layout/vue_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

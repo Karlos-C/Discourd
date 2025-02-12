@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1D1E23"
+    tools:context=".vue.Vue_Accueil">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/titreMessagesPrives"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Messages privés"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <!-- Champ de recherche -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/chercherDiscussion"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Rechercher"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"
+            android:background="@color/FondGrisFonce" />
+
+        <ImageButton
+            android:id="@+id/boutonChercherDiscussion"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:background="@color/FondGrisFonce"
+            android:contentDescription="Rechercher"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Liste des discussions -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:background="#25272E"
+        tools:listitem="@layout/item_utilisateur" />
+
+    <!-- Bouton pour nouvelle conversation -->
+    <Button
+        android:id="@+id/boutonNouveauMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nouveau message"
+        android:textColor="@android:color/white"
+        android:background="@color/FondGrisFonce"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Footer -->
+    <include
+        android:id="@+id/footer_navigation"
+        layout="@layout/vue_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/FondNoir">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/titre_ajout_ami"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Envoyer une demande d'ami"
+        android:textSize="20sp"
+        android:textColor="@color/TitreBlanc"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Champ de saisie -->
+    <EditText
+        android:id="@+id/input_pseudo_ami"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titre_ajout_ami"
+        android:layout_margin="16dp"
+        android:hint="Entrez le pseudo"
+        android:padding="12dp"
+        android:backgroundTint="@color/FondGrisFonce"
+        android:textColorHint="@color/SousTitreGris"
+        android:textColor="@color/TitreBlanc" />
+
+    <!-- Bouton Envoyer -->
+    <Button
+        android:id="@+id/bouton_envoyer_demande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_pseudo_ami"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Envoyer"
+        android:backgroundTint="@color/FondGrisFonce"
+        android:textColor="@color/TitreBlanc" />
+
+    <!-- Footer -->
+    <include
+        android:id="@+id/footer_navigation"
+        layout="@layout/vue_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

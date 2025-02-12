@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/FondNoir">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/mes_amis_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mes Amis"
+        android:textColor="@color/TitreBlanc"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Liste des amis -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_mes_amis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mes_amis_titre"
+        android:layout_above="@id/mes_amis_boutons_layout"
+        android:padding="16dp" />
+
+    <!-- Boutons Ajouter un ami et Demandes d'amis -->
+    <LinearLayout
+        android:id="@+id/mes_amis_boutons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/FondGrisFonce"
+        android:layout_above="@id/footer_navigation"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bouton_ajouter_ami"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ajouter un ami"
+            android:textColor="@color/TitreBlanc"
+            android:backgroundTint="@color/FondGrisFonce" />
+
+        <Button
+            android:id="@+id/bouton_demandes_amis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Demandes d'amis"
+            android:textColor="@color/TitreBlanc"
+            android:backgroundTint="@color/FondGrisFonce"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Footer -->
+    <include
+        android:id="@+id/footer_navigation"
+        layout="@layout/vue_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

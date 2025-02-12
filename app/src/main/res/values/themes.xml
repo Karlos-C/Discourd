@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Discourd" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Attributs personnalisés pour les couleurs -->
+        <item name="couleurTitre">@color/TitreBlanc</item>
+        <item name="couleurSousTitre">@color/SousTitreGris</item>
+        <item name="couleurFondNoir">@color/FondNoir</item>
+        <item name="couleurFondGrisFonce">@color/FondGrisFonce</item>
+
+        <!-- Définir la police Reem Kufi Ink comme police par défaut -->
+        <item name="android:fontFamily">@font/reem_kufi_ink</item>
+    </style>
+
+</resources>

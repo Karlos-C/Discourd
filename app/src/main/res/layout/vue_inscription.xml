@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D1E23"
+    tools:context=".vue.Vue_Inscription">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutInscription"
+        android:layout_width="403dp"
+        android:layout_height="673dp"
+        android:background="@drawable/corner_rounded"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inscrivez vous"
+            android:textAlignment="center"
+            android:textColor="#EBEBEB"
+            android:textSize="40sp"
+            tools:ignore="MissingConstraints" />
+
+
+
+        s
+
+        <EditText
+            android:id="@+id/emailInscription"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Entrez votre email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="#EBEBEB"
+            android:textColorHint="#868686"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="81dp" />
+
+        <EditText
+            android:id="@+id/pseudoInscription"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Entrez votre pseudo"
+            android:textAlignment="center"
+            android:textColor="#EBEBEB"
+            android:textColorHint="#868686"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="81dp" />
+
+        <EditText
+            android:id="@+id/mdpInscription"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Entrez votre mot de passe"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColorHint="#868686"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="42dp" />
+
+        <EditText
+            android:id="@+id/confirmerMdpInscription"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Confirmez votre mot de passe"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColorHint="#868686"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="42dp" />
+
+        <Button
+            android:id="@+id/boutonInscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#3A3434"
+            android:text="S'inscrire'"
+            android:textAlignment="center"
+            android:textColor="#EBEBEB"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <color name="FondNoir">#1D1E23</color>
+    <color name="FondGrisFonce">#25272E</color>
+    <color name="TitreBlanc">#EBEBEB</color>
+    <color name="SousTitreGris">#868686</color>
+    <color name="SwipeGris">#666666</color>
+
+</resources>

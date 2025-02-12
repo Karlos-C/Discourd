@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "473900895185",
+    "project_id": "discourd-3f1c0",
+    "storage_bucket": "discourd-3f1c0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473900895185:android:40570dbfd39b315df52ef0",
+        "android_client_info": {
+          "package_name": "com.example.discourd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmygfTpC-TKfvLbytusrqo2UhBfIRVTsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

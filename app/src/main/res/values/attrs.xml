@@ -1,0 +1,6 @@
+<resources>
+    <attr name="couleurTitre" format="color" />
+    <attr name="couleurSousTitre" format="color" />
+    <attr name="couleurFondNoir" format="color" />
+    <attr name="couleurFondGrisFonce" format="color" />
+</resources>

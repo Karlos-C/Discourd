@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#25272E" /> <!-- Couleur de fond de la barre de recherche -->
+    <corners android:radius="24dp" />  <!-- Coins arrondis -->
+</shape>

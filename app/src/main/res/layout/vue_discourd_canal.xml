@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/FondNoir">
+
+    <!-- En-tête -->
+    <TextView
+        android:id="@+id/chat_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Canal de discussion"
+        android:textColor="@color/SousTitreGris"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Liste des messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/chat_header"
+        android:layout_above="@id/message_input_layout"
+        android:padding="16dp"
+        android:layout_weight="1" />
+
+    <!-- Zone de saisie de message -->
+    <LinearLayout
+        android:id="@+id/message_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_above="@id/footer_navigation"
+        android:background="@color/FondGrisFonce">
+
+        <!-- Champ de saisie -->
+        <EditText
+            android:id="@+id/input_message"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Entrez votre message..."
+            android:padding="12dp"
+            android:textColor="@color/TitreBlanc"
+            android:textColorHint="@color/SousTitreGris"
+            android:background="@color/FondGrisFonce"
+            android:fontFamily="sans-serif"
+            android:textSize="14sp" />
+
+        <!-- Bouton Envoyer -->
+        <ImageButton
+            android:id="@+id/send_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_test"
+            android:contentDescription="Envoyer"
+            android:background="@color/FondGrisFonce"
+            android:elevation="4dp" />
+    </LinearLayout>
+
+    <!-- Footer -->
+    <include
+        android:id="@+id/footer_navigation"
+        layout="@layout/vue_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

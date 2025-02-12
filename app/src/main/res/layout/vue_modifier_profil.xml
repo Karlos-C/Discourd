@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/FondNoir">
+
+    <!-- Contenu principal défilable -->
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Section Avatar + Pseudo + Email -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp">
+
+                <!-- Avatar -->
+                <ImageView
+                    android:id="@+id/avatarModifierProfil"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/icone_profil"
+                    android:contentDescription="Avatar"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="centerCrop"
+                    android:elevation="4dp"
+                    android:layout_marginEnd="16dp" />
+
+                <!-- Pseudo et Email -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/displayPseudo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pseudo"
+                        android:textColor="@color/TitreBlanc"
+                        android:textSize="18sp"
+                        android:paddingBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/displayEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@color/SousTitreGris"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Section Nouveau pseudo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nouveau pseudo"
+                android:textColor="@color/SousTitreGris"
+                android:textSize="16sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/FondGrisFonce"
+                android:padding="8dp"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/inputPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Entrez un nouveau pseudo"
+                    android:padding="8dp"
+                    android:background="@null"
+                    android:textColor="@color/TitreBlanc"
+                    android:textColorHint="@color/SousTitreGris"
+                    android:textSize="14sp"
+                    android:inputType="textPersonName" />
+            </FrameLayout>
+
+            <!-- Section Nouvel email -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nouvel email"
+                android:textColor="@color/SousTitreGris"
+                android:textSize="16sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/FondGrisFonce"
+                android:padding="8dp"
+                android:layout_marginBottom="24dp">
+
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Entrez un nouvel email"
+                    android:padding="8dp"
+                    android:background="@null"
+                    android:textColor="@color/TitreBlanc"
+                    android:textColorHint="@color/SousTitreGris"
+                    android:textSize="14sp"
+                    android:inputType="textEmailAddress" />
+            </FrameLayout>
+
+            <!-- Bouton Confirmer -->
+            <Button
+                android:id="@+id/btnConfirmerModification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmer"
+                android:backgroundTint="@color/FondGrisFonce"
+                android:textColor="@color/TitreBlanc"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer -->
+    <include
+        android:id="@+id/footer_navigation"
+        layout="@layout/vue_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

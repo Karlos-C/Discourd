@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/FondNoir">
+
+    <!-- Contenu défilable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutCompte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <!-- Titre centré -->
+                <TextView
+                    android:id="@+id/titreProfil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mon Profil"
+                    android:textColor="@color/TitreBlanc"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="start" />
+
+                <!-- Bouton Réglages -->
+                <ImageView
+                    android:id="@+id/buttonParametres"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/icone_reglages"
+                    android:contentDescription="Bouton Parametres"
+                    android:layout_gravity="end"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+
+            <!-- Section Informations de Profil -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/FondGrisFonce"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Avatar -->
+                    <ImageView
+                        android:id="@+id/avatarProfil"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/icone_profil"
+                        android:contentDescription="Avatar"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerCrop"
+                        android:background="@color/SousTitreGris"/>
+
+                    <!-- Informations utilisateur -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nomProfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nom d'utilisateur"
+                            android:textSize="18sp"
+                            android:textColor="@color/TitreBlanc"
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <TextView
+                            android:id="@+id/emailProfil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="email@example.com"
+                            android:textSize="14sp"
+                            android:textColor="@color/SousTitreGris"
+                            android:paddingTop="4dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Section Détails supplémentaires -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Détails"
+                android:textColor="@color/SousTitreGris"
+                android:paddingBottom="8dp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/FondGrisFonce"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Membre depuis :"
+                        android:textColor="@color/TitreBlanc"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/dateMembreDepuis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21 septembre 2024"
+                        android:textColor="@color/SousTitreGris"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Bouton Modifier informations Profil -->
+            <Button
+                android:id="@+id/modifierProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modifier les informations du Profil"
+                android:backgroundTint="@color/SousTitreGris"
+                android:textColor="@color/TitreBlanc"
+                android:fontFamily="sans-serif-medium"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Bouton Modifier photo Profil -->
+            <Button
+                android:id="@+id/modifierPhotoProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modifier la photo de profil"
+                android:backgroundTint="@color/SousTitreGris"
+                android:textColor="@color/TitreBlanc"
+                android:fontFamily="sans-serif-medium"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer navigation -->
+    <include
+        android:id="@+id/footer_navigation"
+        layout="@layout/vue_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

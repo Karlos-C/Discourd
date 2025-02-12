@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@color/FondGrisFonce">
+
+    <!-- Image de profil -->
+    <ImageView
+        android:id="@+id/avatar_demande_ami"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/icone_profil"
+        android:contentDescription="Avatar" />
+
+    <!-- Détails de la demande -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pseudo_demande_ami"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pseudo de l'ami"
+            android:textColor="@color/TitreBlanc"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Boutons Accepter / Refuser -->
+    <Button
+        android:id="@+id/bouton_accepter_demande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accepter"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#5A7538"
+        android:textColor="@color/TitreBlanc" />
+
+    <Button
+        android:id="@+id/bouton_refuser_demande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refuser"
+        android:backgroundTint="#A24A42"
+        android:textColor="@color/TitreBlanc" />
+</LinearLayout>
