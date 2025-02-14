@@ -11,19 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Titre de la page -->
+            <!-- Titre + icône retour -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="12dp"
+                android:padding="8dp"
                 android:gravity="center_vertical">
 
                 <TextView
@@ -33,28 +35,25 @@
                     android:text="Modifier la photo de profil"
                     android:textColor="@color/TitreBlanc"
                     android:textSize="20sp"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="start" />
+                    android:fontFamily="sans-serif-medium" />
 
-
-                <!-- IL FAUT METTRE UN ICONE DE RETOUR PROFIL -->
                 <ImageView
                     android:id="@+id/retourProfil"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@drawable/icone_profil"
                     android:contentDescription="Retour au profil"
-                    android:layout_gravity="end"
                     android:padding="4dp" />
             </LinearLayout>
 
-            <!-- Prévisualisation de l'image actuelle -->
+            <!-- Image actuelle -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/FondGrisFonce"
                 android:padding="16dp"
-                android:layout_marginBottom="16dp">
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp">
 
                 <ImageView
                     android:id="@+id/imageActuelle"
@@ -67,7 +66,7 @@
                     android:layout_gravity="center" />
             </FrameLayout>
 
-            <!-- Bouton pour ouvrir la galerie -->
+            <!-- Choisir une nouvelle photo -->
             <Button
                 android:id="@+id/ouvrirGalerie"
                 android:layout_width="wrap_content"
@@ -77,15 +76,16 @@
                 android:textColor="@color/TitreBlanc"
                 android:fontFamily="sans-serif-medium"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="8dp" />
 
-            <!-- Prévisualisation de la nouvelle image -->
+            <!-- Nouvelle image prévisualisée -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/FondGrisFonce"
                 android:padding="16dp"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp">
 
                 <ImageView
                     android:id="@+id/imagePreview"
@@ -98,7 +98,7 @@
                     android:layout_gravity="center" />
             </FrameLayout>
 
-            <!-- Bouton pour confirmer les changements -->
+            <!-- Bouton confirmer -->
             <Button
                 android:id="@+id/confirmerChangement"
                 android:layout_width="wrap_content"
@@ -108,11 +108,12 @@
                 android:textColor="@color/TitreBlanc"
                 android:fontFamily="sans-serif-medium"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
         </LinearLayout>
     </ScrollView>
 
-    <!-- Footer navigation -->
+    <!-- Footer -->
     <include
         android:id="@+id/footer_navigation"
         layout="@layout/vue_footer"
